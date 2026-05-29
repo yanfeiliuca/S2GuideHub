@@ -7,19 +7,19 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.s2guidehub.com/about.html</loc>
+    <loc>https://www.s2guidehub.com/about</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.s2guidehub.com/contact.html</loc>
+    <loc>https://www.s2guidehub.com/contact</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.s2guidehub.com/privacy.html</loc>
+    <loc>https://www.s2guidehub.com/privacy</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
