@@ -13,6 +13,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.s2guidehub.com/unlocks/tadpole-vehicle</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.s2guidehub.com/contact</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>

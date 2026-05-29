@@ -129,10 +129,15 @@ const content = {
     footerTop: "Back to top",
     scoreLabel: "Score",
     stageLabel: "Stage",
+    routeDifficultyLabel: "Route difficulty",
     confidenceLabel: "Confidence",
     routeLabel: "Route status",
     riskLabel: "Risk",
     distanceLabel: "Distance",
+    valuePointLabel: "Value point",
+    statusLabel: "Status",
+    openGuide: "Open guide",
+    guideQueued: "Guide queued",
     pendingParts: "Parts pending",
     routeDraft: "Route draft",
     needsGameplayCheck: "Needs gameplay check",
@@ -288,12 +293,16 @@ const unlocks = [
     category: "utility",
     score: 7.8,
     risk: "Medium",
+    routeDifficulty: "Medium",
+    status: "Needs checking",
     distance: "Unknown",
     stage: "Early-mid",
     confidence: "Needs gameplay check",
     tags: ["utility", "progression", "route", "source check"],
     en: {
       name: "Feedback Resonator",
+      valuePoint:
+        "Potential route utility if it changes scouting, signal tracking, or unlock sequencing.",
       summary:
         "A utility/progression candidate. The Atlas entry should explain whether it changes scouting, signal tracking, or unlock sequencing after verification.",
       value:
@@ -312,12 +321,16 @@ const unlocks = [
     category: "vehicle",
     score: 8.1,
     risk: "Medium",
+    routeDifficulty: "Medium",
+    status: "Needs checking",
     distance: "Route pending",
     stage: "Mid",
     confidence: "Needs gameplay check",
     tags: ["vehicle", "assembly", "components", "haul"],
     en: {
       name: "Tadpole Haul Chassis",
+      valuePoint:
+        "Vehicle storage and assembly planning target; useful once prerequisites are confirmed.",
       summary:
         "A vehicle assembly candidate. The future route page should gather every chassis requirement before sending players across the map.",
       value:
@@ -336,12 +349,17 @@ const unlocks = [
     category: "vehicle",
     score: 9.0,
     risk: "High",
+    routeDifficulty: "High",
+    status: "Early Access",
     distance: "Likely long",
     stage: "Mid",
     confidence: "Needs gameplay check",
+    pageUrl: "unlocks/tadpole-vehicle.html",
     tags: ["vehicle", "mobility", "flagship", "assembly"],
     en: {
       name: "Tadpole Vehicle",
+      valuePoint:
+        "Core mobility upgrade that can extend range, oxygen safety, and team logistics.",
       summary:
         "A flagship mobility target. Keep it as a planning entry until parts, station requirements, route order, and return plan are verified.",
       value:
@@ -360,12 +378,16 @@ const unlocks = [
     category: "mobility",
     score: 8.4,
     risk: "Low",
+    routeDifficulty: "Low",
+    status: "Needs checking",
     distance: "Short-medium",
     stage: "Early",
     confidence: "Needs gameplay check",
     tags: ["mobility", "early", "upgrade", "fins"],
     en: {
       name: "Improved Fins",
+      valuePoint:
+        "Early movement speed candidate that can improve oxygen margins and gathering loops.",
       summary:
         "An early mobility upgrade candidate. The guide should verify exact requirements before recommending it as a first-route priority.",
       value:
@@ -384,12 +406,16 @@ const unlocks = [
     category: "depth",
     score: 8.7,
     risk: "High",
+    routeDifficulty: "High",
+    status: "Needs checking",
     distance: "Patch-sensitive",
     stage: "Mid",
     confidence: "Needs gameplay check",
     tags: ["depth", "module", "vehicle", "progression"],
     en: {
       name: "Tadpole Depth Module MK I",
+      valuePoint:
+        "Depth progression target that may open new route layers once prerequisites are verified.",
       summary:
         "A depth progression candidate. The route must clarify prerequisites, safe depth assumptions, and whether the trip depends on another vehicle unlock.",
       value:
@@ -430,6 +456,32 @@ const riskLabels = {
     Low: "低",
     Medium: "中",
     High: "高",
+  },
+};
+
+const routeDifficultyLabels = {
+  en: {
+    Low: "Low",
+    Medium: "Medium",
+    High: "High",
+  },
+  zh: {
+    Low: "\u4f4e",
+    Medium: "\u4e2d",
+    High: "\u9ad8",
+  },
+};
+
+const statusLabels = {
+  en: {
+    Verified: "Verified",
+    "Early Access": "Early Access",
+    "Needs checking": "Needs checking",
+  },
+  zh: {
+    Verified: "\u5df2\u6838\u5b9e",
+    "Early Access": "\u62a2\u5148\u4f53\u9a8c",
+    "Needs checking": "\u5f85\u6838\u67e5",
   },
 };
 
@@ -536,9 +588,12 @@ function getFilteredUnlocks() {
       item.category,
       item.stage,
       item.risk,
+      item.routeDifficulty,
+      item.status,
       item.distance,
       item.confidence,
       localized.name,
+      localized.valuePoint,
       localized.summary,
       localized.value,
       ...item.tags,
@@ -555,6 +610,14 @@ function createChip(text, variant = "") {
   chip.className = variant ? `chip ${variant}` : "chip";
   chip.textContent = text;
   return chip;
+}
+
+function createLinkChip(href, text) {
+  const link = document.createElement("a");
+  link.className = "chip chip-link";
+  link.href = href;
+  link.textContent = text;
+  return link;
 }
 
 function createUnlockCard(item, options = {}) {
@@ -586,18 +649,26 @@ function createUnlockCard(item, options = {}) {
   summary.className = "unlock-summary";
   summary.textContent = localized.summary;
 
-  const value = document.createElement("p");
-  value.className = "unlock-value";
-  value.textContent = localized.value;
+  const value = document.createElement("div");
+  value.className = "unlock-value-block";
+  const valueLabel = document.createElement("span");
+  valueLabel.textContent = content[lang].valuePointLabel || "Value point";
+  const valueCopy = document.createElement("p");
+  valueCopy.textContent = localized.valuePoint || localized.value;
+  value.append(valueLabel, valueCopy);
 
   const meta = document.createElement("dl");
   meta.className = "unlock-meta";
   meta.append(
     createMetaItem(content[lang].stageLabel, stageLabels[lang][item.stage] || item.stage),
+    createMetaItem(
+      content[lang].routeDifficultyLabel || "Route difficulty",
+      routeDifficultyLabels[lang][item.routeDifficulty] || item.routeDifficulty,
+    ),
     createMetaItem(content[lang].riskLabel, riskLabels[lang][item.risk] || item.risk),
     createMetaItem(
-      content[lang].distanceLabel,
-      distanceLabels[lang][item.distance] || item.distance,
+      content[lang].statusLabel || "Status",
+      statusLabels[lang][item.status] || item.status,
     ),
   );
 
@@ -610,7 +681,11 @@ function createUnlockCard(item, options = {}) {
   );
 
   if (options.featured) {
-    chips.append(createChip(content[lang].pendingParts, "warning"));
+    chips.append(
+      item.pageUrl
+        ? createLinkChip(item.pageUrl, content[lang].openGuide || "Open guide")
+        : createChip(content[lang].guideQueued || "Guide queued", "warning"),
+    );
   }
 
   card.append(header, summary, value, meta, chips);

@@ -629,19 +629,33 @@ h3 {
   text-transform: uppercase;
 }
 
-.unlock-summary,
-.unlock-value {
+.unlock-summary {
   margin: 16px 0 0;
   color: var(--soft);
 }
 
-.unlock-value {
+.unlock-value-block {
+  margin: 16px 0 0;
+  border-top: 1px solid rgba(110, 238, 225, 0.12);
+  padding-top: 14px;
+}
+
+.unlock-value-block span {
+  display: block;
+  color: var(--amber);
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.unlock-value-block p {
+  margin: 7px 0 0;
   color: var(--muted);
 }
 
 .unlock-meta {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
   margin: 18px 0 0;
 }
@@ -782,6 +796,20 @@ h3 {
 .chip.framework {
   border-color: rgba(141, 246, 169, 0.42);
   color: var(--green);
+}
+
+.chip-link {
+  border-color: rgba(38, 234, 215, 0.5);
+  background: rgba(38, 234, 215, 0.1);
+  color: var(--cyan-soft);
+  font-weight: 900;
+}
+
+.chip-link:hover,
+.chip-link:focus-visible {
+  border-color: rgba(255, 201, 95, 0.72);
+  color: var(--amber);
+  outline: none;
 }
 
 .chip.no-coordinates {
@@ -974,6 +1002,154 @@ h3 {
   padding-left: 20px;
 }
 
+.guide-main {
+  padding-bottom: 48px;
+}
+
+.guide-hero h1 {
+  max-width: 920px;
+}
+
+.guide-hero-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  max-width: var(--max);
+  margin-top: 34px;
+}
+
+.guide-hero-summary div,
+.guide-panel {
+  border: 1px solid rgba(110, 238, 225, 0.16);
+  border-radius: var(--radius);
+  background: rgba(8, 24, 31, 0.74);
+}
+
+.guide-hero-summary div {
+  padding: 16px;
+}
+
+.guide-hero-summary span,
+.guide-meta-list dt,
+.guide-table th {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.guide-hero-summary strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.guide-section {
+  padding: 54px max(24px, calc((100vw - var(--max)) / 2));
+}
+
+.guide-section + .guide-section {
+  border-top: 1px solid rgba(110, 238, 225, 0.08);
+}
+
+.guide-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: 16px;
+}
+
+.guide-panel {
+  padding: 24px;
+}
+
+.guide-panel-primary h2,
+.guide-panel h2 {
+  font-size: 2rem;
+}
+
+.guide-panel p {
+  color: var(--muted);
+}
+
+.guide-meta-list {
+  display: grid;
+  gap: 14px;
+  margin: 18px 0 0;
+}
+
+.guide-meta-list div {
+  border-top: 1px solid rgba(110, 238, 225, 0.12);
+  padding-top: 12px;
+}
+
+.guide-meta-list dd {
+  margin: 5px 0 0;
+  color: var(--soft);
+}
+
+.status-card {
+  background:
+    linear-gradient(180deg, rgba(14, 40, 49, 0.88), rgba(5, 16, 22, 0.78));
+}
+
+.warning-panel {
+  border-color: rgba(255, 201, 95, 0.24);
+}
+
+.guide-heading {
+  margin-bottom: 24px;
+}
+
+.guide-route-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.guide-table-wrap {
+  width: 100%;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.guide-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+}
+
+.guide-table th,
+.guide-table td {
+  border-bottom: 1px solid rgba(110, 238, 225, 0.12);
+  padding: 13px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.guide-table td {
+  color: var(--soft);
+}
+
+.source-list {
+  display: grid;
+  gap: 14px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.source-list li {
+  display: grid;
+  gap: 5px;
+  border-top: 1px solid rgba(110, 238, 225, 0.12);
+  padding-top: 14px;
+}
+
+.source-list span {
+  color: var(--muted);
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -1070,12 +1246,14 @@ h3 {
 
   .module-grid,
   .route-timeline,
+  .guide-route-grid,
   .blog-preview-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .finder-shell,
-  .route-template-grid {
+  .route-template-grid,
+  .guide-layout {
     grid-template-columns: 1fr;
   }
 
@@ -1192,9 +1370,18 @@ h3 {
   .featured-grid,
   .logic-grid,
   .route-timeline,
+  .guide-route-grid,
   .finder-results,
   .blog-preview-grid {
     grid-template-columns: 1fr;
+  }
+
+  .guide-hero-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-section {
+    padding: 42px 18px;
   }
 
   .filter-group {

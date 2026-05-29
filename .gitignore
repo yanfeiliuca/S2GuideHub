@@ -4,6 +4,7 @@ desktop.ini
 *.log
 verification-*.png
 .edge-verify*/
+.edge-dump*/
 .env
 .env.*
 node_modules/
