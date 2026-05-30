@@ -1,0 +1,118 @@
+{
+    "game":  "Subnautica 2",
+    "created":  "2026-05-30",
+    "gallery":  "S2GuideHub official promotional image library",
+    "source_pages":  [
+                         {
+                             "name":  "IGDB Subnautica 2 Press kit",
+                             "url":  "https://www.igdb.com/games/subnautica-2/presskit"
+                         },
+                         {
+                             "name":  "Steam Subnautica 2 store page",
+                             "url":  "https://store.steampowered.com/app/1962700/_2"
+                         }
+                     ],
+    "usage_note":  "These files are official/publicly accessible promotional or press-kit images, not CC0/public-domain assets. Copyright and trademarks remain with Unknown Worlds Entertainment and related rightsholders. Use with source credit and do not present them as S2GuideHub-owned artwork.",
+    "images":  [
+                   {
+                       "id":  "official-01",
+                       "title":  "Official presskit screenshot 01",
+                       "file":  "subnautica-2-official-01.jpg",
+                       "path":  "assets/official-gallery/subnautica-2-official-01.jpg",
+                       "source_page":  "https://www.igdb.com/games/subnautica-2/presskit",
+                       "source_image_url":  "https://images.igdb.com/igdb/image/upload/t_720p/scsxb3.jpg",
+                       "credit":  "Unknown Worlds Entertainment via IGDB Subnautica 2 press kit",
+                       "rights":  "Official promotional asset; copyright and trademarks retained by their owners; not public domain."
+                   },
+                   {
+                       "id":  "official-02",
+                       "title":  "Official presskit screenshot 02",
+                       "file":  "subnautica-2-official-02.jpg",
+                       "path":  "assets/official-gallery/subnautica-2-official-02.jpg",
+                       "source_page":  "https://www.igdb.com/games/subnautica-2/presskit",
+                       "source_image_url":  "https://images.igdb.com/igdb/image/upload/t_720p/scsxb4.jpg",
+                       "credit":  "Unknown Worlds Entertainment via IGDB Subnautica 2 press kit",
+                       "rights":  "Official promotional asset; copyright and trademarks retained by their owners; not public domain."
+                   },
+                   {
+                       "id":  "official-03",
+                       "title":  "Official presskit screenshot 03",
+                       "file":  "subnautica-2-official-03.jpg",
+                       "path":  "assets/official-gallery/subnautica-2-official-03.jpg",
+                       "source_page":  "https://www.igdb.com/games/subnautica-2/presskit",
+                       "source_image_url":  "https://images.igdb.com/igdb/image/upload/t_720p/scsxb5.jpg",
+                       "credit":  "Unknown Worlds Entertainment via IGDB Subnautica 2 press kit",
+                       "rights":  "Official promotional asset; copyright and trademarks retained by their owners; not public domain."
+                   },
+                   {
+                       "id":  "official-04",
+                       "title":  "Official presskit screenshot 04",
+                       "file":  "subnautica-2-official-04.jpg",
+                       "path":  "assets/official-gallery/subnautica-2-official-04.jpg",
+                       "source_page":  "https://www.igdb.com/games/subnautica-2/presskit",
+                       "source_image_url":  "https://images.igdb.com/igdb/image/upload/t_720p/scsxb6.jpg",
+                       "credit":  "Unknown Worlds Entertainment via IGDB Subnautica 2 press kit",
+                       "rights":  "Official promotional asset; copyright and trademarks retained by their owners; not public domain."
+                   },
+                   {
+                       "id":  "official-05",
+                       "title":  "Official presskit screenshot 05",
+                       "file":  "subnautica-2-official-05.jpg",
+                       "path":  "assets/official-gallery/subnautica-2-official-05.jpg",
+                       "source_page":  "https://www.igdb.com/games/subnautica-2/presskit",
+                       "source_image_url":  "https://images.igdb.com/igdb/image/upload/t_720p/scsxb7.jpg",
+                       "credit":  "Unknown Worlds Entertainment via IGDB Subnautica 2 press kit",
+                       "rights":  "Official promotional asset; copyright and trademarks retained by their owners; not public domain."
+                   },
+                   {
+                       "id":  "official-06",
+                       "title":  "Official presskit screenshot 06",
+                       "file":  "subnautica-2-official-06.jpg",
+                       "path":  "assets/official-gallery/subnautica-2-official-06.jpg",
+                       "source_page":  "https://www.igdb.com/games/subnautica-2/presskit",
+                       "source_image_url":  "https://images.igdb.com/igdb/image/upload/t_720p/scsbzm.jpg",
+                       "credit":  "Unknown Worlds Entertainment via IGDB Subnautica 2 press kit",
+                       "rights":  "Official promotional asset; copyright and trademarks retained by their owners; not public domain."
+                   },
+                   {
+                       "id":  "official-07",
+                       "title":  "Official presskit screenshot 07",
+                       "file":  "subnautica-2-official-07.jpg",
+                       "path":  "assets/official-gallery/subnautica-2-official-07.jpg",
+                       "source_page":  "https://www.igdb.com/games/subnautica-2/presskit",
+                       "source_image_url":  "https://images.igdb.com/igdb/image/upload/t_720p/scsbzn.jpg",
+                       "credit":  "Unknown Worlds Entertainment via IGDB Subnautica 2 press kit",
+                       "rights":  "Official promotional asset; copyright and trademarks retained by their owners; not public domain."
+                   },
+                   {
+                       "id":  "official-08",
+                       "title":  "Official presskit screenshot 08",
+                       "file":  "subnautica-2-official-08.jpg",
+                       "path":  "assets/official-gallery/subnautica-2-official-08.jpg",
+                       "source_page":  "https://www.igdb.com/games/subnautica-2/presskit",
+                       "source_image_url":  "https://images.igdb.com/igdb/image/upload/t_720p/scsbzo.jpg",
+                       "credit":  "Unknown Worlds Entertainment via IGDB Subnautica 2 press kit",
+                       "rights":  "Official promotional asset; copyright and trademarks retained by their owners; not public domain."
+                   },
+                   {
+                       "id":  "official-09",
+                       "title":  "Official presskit screenshot 09",
+                       "file":  "subnautica-2-official-09.jpg",
+                       "path":  "assets/official-gallery/subnautica-2-official-09.jpg",
+                       "source_page":  "https://www.igdb.com/games/subnautica-2/presskit",
+                       "source_image_url":  "https://images.igdb.com/igdb/image/upload/t_720p/scsbzp.jpg",
+                       "credit":  "Unknown Worlds Entertainment via IGDB Subnautica 2 press kit",
+                       "rights":  "Official promotional asset; copyright and trademarks retained by their owners; not public domain."
+                   },
+                   {
+                       "id":  "official-10",
+                       "title":  "Official presskit screenshot 10",
+                       "file":  "subnautica-2-official-10.jpg",
+                       "path":  "assets/official-gallery/subnautica-2-official-10.jpg",
+                       "source_page":  "https://www.igdb.com/games/subnautica-2/presskit",
+                       "source_image_url":  "https://images.igdb.com/igdb/image/upload/t_720p/scsbzq.jpg",
+                       "credit":  "Unknown Worlds Entertainment via IGDB Subnautica 2 press kit",
+                       "rights":  "Official promotional asset; copyright and trademarks retained by their owners; not public domain."
+                   }
+               ]
+}
