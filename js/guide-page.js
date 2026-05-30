@@ -155,20 +155,44 @@
   }
 
 
+  const guideImages = {
+    "feedback-resonator": {
+      src: "assets/concept-feedback-resonator.png",
+      alt: "AI-generated Feedback Resonator concept image with sonar rings and glowing route signals",
+    },
+    "tadpole-haul-chassis": {
+      src: "assets/concept-tadpole-haul-chassis.png",
+      alt: "AI-generated Tadpole Haul Chassis concept image with a luminous assembly frame",
+    },
+    "tadpole-vehicle": {
+      src: "assets/concept-tadpole-vehicle.png",
+      alt: "AI-generated Tadpole Vehicle concept image with a small underwater craft silhouette",
+    },
+    "improved-fins": {
+      src: "assets/concept-improved-fins.png",
+      alt: "AI-generated Improved Fins concept image with paired luminous fin shapes",
+    },
+    "tadpole-depth-module-mk-i": {
+      src: "assets/concept-tadpole-depth-module-mk-i.png",
+      alt: "AI-generated Tadpole Depth Module MK I concept image with a glowing pressure module",
+    },
+  };
+
   function renderConceptFigure(lang) {
+    const image = guideImages[window.guidePageId] || guideImages["tadpole-vehicle"];
     const caption =
       lang === "zh"
         ? "AI-generated concept image / AI 生成概念图。Not official Subnautica 2 art or a game screenshot."
         : "AI-generated concept image. Not official Subnautica 2 art or a game screenshot.";
-    const alt = "AI-generated underwater exploration concept image showing a small craft surveying a deep ocean route";
 
     return `
       <figure class="concept-figure guide-concept">
-        <img src="../assets/blog-hotfix-2-route-planning.png" alt="${escapeHtml(alt)}">
+        <img src="../${escapeHtml(image.src)}" alt="${escapeHtml(image.alt)}">
         <figcaption>${escapeHtml(caption)}</figcaption>
       </figure>
     `;
   }
+
   function renderPage(lang) {
     const data = page.content[lang] || page.content.en;
     const documentLang = lang === "zh" ? "zh-CN" : "en";
