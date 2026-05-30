@@ -1020,6 +1020,7 @@ h3 {
 
 .guide-hero-summary div,
 .guide-panel {
+  min-width: 0;
   border: 1px solid rgba(110, 238, 225, 0.16);
   border-radius: var(--radius);
   background: rgba(8, 24, 31, 0.74);
@@ -1043,6 +1044,7 @@ h3 {
   margin-top: 6px;
   color: var(--ink);
   line-height: 1.2;
+  overflow-wrap: anywhere;
 }
 
 .guide-section {
@@ -1086,6 +1088,7 @@ h3 {
 .guide-meta-list dd {
   margin: 5px 0 0;
   color: var(--soft);
+  overflow-wrap: anywhere;
 }
 
 .status-card {
@@ -1129,6 +1132,7 @@ h3 {
 
 .guide-table td {
   color: var(--soft);
+  overflow-wrap: anywhere;
 }
 
 .source-list {
@@ -1148,6 +1152,7 @@ h3 {
 
 .source-list span {
   color: var(--muted);
+  overflow-wrap: anywhere;
 }
 
 .article-page {

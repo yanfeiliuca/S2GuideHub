@@ -5,6 +5,8 @@ desktop.ini
 verification-*.png
 .edge-verify*/
 .edge-dump*/
+.chrome-verify*/
+.chrome-cdp*/
 .env
 .env.*
 node_modules/

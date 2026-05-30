@@ -377,26 +377,27 @@ const unlocks = [
     id: "improved-fins",
     category: "mobility",
     score: 8.4,
-    risk: "Low",
-    routeDifficulty: "Low",
-    status: "Needs checking",
+    risk: "Medium",
+    routeDifficulty: "Medium",
+    status: "Early Access",
     distance: "Short-medium",
-    stage: "Early",
+    stage: "Mid",
     confidence: "Needs gameplay check",
+    pageUrl: "unlocks/improved-fins.html",
     tags: ["mobility", "early", "upgrade", "fins"],
     en: {
       name: "Improved Fins",
       valuePoint:
-        "Early movement speed candidate that can improve oxygen margins and gathering loops.",
+        "Movement upgrade that can improve oxygen margins, escape safety, and repeated gathering loops.",
       summary:
-        "An early mobility upgrade candidate. The guide should verify exact requirements before recommending it as a first-route priority.",
+        "A mid-game mobility upgrade candidate around Alien Ruins route progression. Exact stop order remains pending until S2GuideHub checks it in-game.",
       value:
         "Useful to rank because movement speed can change oxygen safety, collection loops, and early route timing.",
     },
     zh: {
       name: "Improved Fins",
       summary:
-        "早期移动升级候选项。推荐它作为开局路线前，需要先核查准确需求。",
+        "中期移动升级候选项，和 Alien Ruins 路线进度相关。精确停靠顺序要等本站实测后再发布。",
       value:
         "值得排序，因为移动速度会影响氧气安全、收集循环和早期路线耗时。",
     },
