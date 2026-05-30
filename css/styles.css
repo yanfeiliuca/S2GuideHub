@@ -586,6 +586,17 @@ h3 {
     linear-gradient(180deg, rgba(14, 40, 49, 0.82), rgba(5, 16, 22, 0.78));
 }
 
+a.unlock-card {
+  color: inherit;
+}
+
+a.unlock-card:hover,
+a.unlock-card:focus-visible {
+  border-color: rgba(255, 201, 95, 0.58);
+  outline: none;
+  transform: translateY(-2px);
+}
+
 .featured-unlock-card {
   min-height: 340px;
 }
@@ -1072,6 +1083,13 @@ h3 {
 
 .guide-panel p {
   color: var(--muted);
+}
+
+.guide-related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
 }
 
 .guide-meta-list {
@@ -1618,7 +1636,11 @@ h3 {
   }
 
   .page-hero p:not(.eyebrow) {
+    width: 100%;
+    max-width: 100%;
     font-size: 1rem;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .text-section {
@@ -1729,6 +1751,16 @@ h3 {
 
   .guide-hero-summary {
     grid-template-columns: 1fr;
+  }
+
+  .guide-hero-summary div,
+  .guide-panel,
+  .module-card,
+  .route-step,
+  .blog-preview {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .guide-section {

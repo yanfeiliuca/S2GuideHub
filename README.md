@@ -10,8 +10,11 @@ The first version is intentionally simple:
 
 - `index.html` single-page Blueprint Atlas MVP
 - `about.html`, `contact.html`, and `privacy.html` public support pages
+- `unlocks/*.html` Blueprint Atlas item guide pages for Featured Unlocks
 - `css/styles.css` visual system and responsive layout
-- `js/main.js` bilingual copy, language switcher, unlock data, and unlock filtering
+- `js/main.js` homepage bilingual copy, language switcher, unlock data, and unlock filtering
+- `js/guide-data.js` shared bilingual content for item guide pages
+- `js/guide-page.js` shared item guide renderer and language switcher
 - `assets/deep-ocean-console.png` original generated hero background
 - `DESIGN.md` design architecture and expansion notes
 - `robots.txt`, `sitemap.xml`, `_headers`, and `_redirects` for basic static deployment
@@ -32,6 +35,7 @@ Core layout:
 - Sticky header with language switcher
 - Full-bleed hero using original ocean console art
 - Featured unlock cards with score, risk, distance, and verification labels
+- Clickable Featured Unlock cards linking to matching item guide pages
 - Searchable unlock index
 - Route logic, item-page template preview, Blog, FAQ, and disclaimer
 - Section-level Back to top links for faster navigation
@@ -68,6 +72,7 @@ The current code version focuses on high-value unlock routes:
 - Optimized travel route
 - Risk warnings
 - Easy benefits along the way
+- Shared item-page sections: Summary, Player value, Required parts, Optimized route, Risks and extras, Verification
 - Blog updates tied to blueprint discoveries and route changes
 
 Existing requirements to preserve:

@@ -14,12 +14,30 @@
   </url>
   <url>
     <loc>https://www.s2guidehub.com/unlocks/tadpole-vehicle</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.s2guidehub.com/unlocks/feedback-resonator</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.s2guidehub.com/unlocks/tadpole-haul-chassis</loc>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.s2guidehub.com/unlocks/improved-fins</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.s2guidehub.com/unlocks/tadpole-depth-module-mk-i</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

@@ -270,10 +270,15 @@ const content = {
     footerTop: "返回顶部",
     scoreLabel: "评分",
     stageLabel: "阶段",
+    routeDifficultyLabel: "路线难度",
     confidenceLabel: "可信度",
     routeLabel: "路线状态",
     riskLabel: "风险",
     distanceLabel: "距离",
+    valuePointLabel: "价值点",
+    statusLabel: "状态",
+    openGuide: "打开攻略",
+    guideQueued: "攻略排队中",
     pendingParts: "部件待核查",
     routeDraft: "路线草稿",
     needsGameplayCheck: "待实测",
@@ -298,6 +303,7 @@ const unlocks = [
     distance: "Unknown",
     stage: "Early-mid",
     confidence: "Needs gameplay check",
+    pageUrl: "unlocks/feedback-resonator.html",
     tags: ["utility", "progression", "route", "source check"],
     en: {
       name: "Feedback Resonator",
@@ -326,6 +332,7 @@ const unlocks = [
     distance: "Route pending",
     stage: "Mid",
     confidence: "Needs gameplay check",
+    pageUrl: "unlocks/tadpole-haul-chassis.html",
     tags: ["vehicle", "assembly", "components", "haul"],
     en: {
       name: "Tadpole Haul Chassis",
@@ -390,14 +397,14 @@ const unlocks = [
       valuePoint:
         "Movement upgrade that can improve oxygen margins, escape safety, and repeated gathering loops.",
       summary:
-        "A mid-game mobility upgrade candidate around Alien Ruins route progression. Exact stop order remains pending until S2GuideHub checks it in-game.",
+        "A mid-game mobility upgrade candidate around deeper route progression. Exact stop order remains pending until S2GuideHub checks it in-game.",
       value:
         "Useful to rank because movement speed can change oxygen safety, collection loops, and early route timing.",
     },
     zh: {
       name: "Improved Fins",
       summary:
-        "中期移动升级候选项，和 Alien Ruins 路线进度相关。精确停靠顺序要等本站实测后再发布。",
+        "中期移动升级候选项，和更深路线进度相关。精确停靠顺序要等本站实测后再发布。",
       value:
         "值得排序，因为移动速度会影响氧气安全、收集循环和早期路线耗时。",
     },
@@ -412,6 +419,7 @@ const unlocks = [
     distance: "Patch-sensitive",
     stage: "Mid",
     confidence: "Needs gameplay check",
+    pageUrl: "unlocks/tadpole-depth-module-mk-i.html",
     tags: ["depth", "module", "vehicle", "progression"],
     en: {
       name: "Tadpole Depth Module MK I",
@@ -624,8 +632,16 @@ function createLinkChip(href, text) {
 function createUnlockCard(item, options = {}) {
   const lang = state.lang;
   const localized = item[lang];
-  const card = document.createElement("article");
+  const card =
+    options.featured && item.pageUrl
+      ? document.createElement("a")
+      : document.createElement("article");
   card.className = options.featured ? "unlock-card featured-unlock-card" : "unlock-card";
+
+  if (options.featured && item.pageUrl) {
+    card.href = item.pageUrl;
+    card.setAttribute("aria-label", `${content[lang].openGuide || "Open guide"}: ${localized.name}`);
+  }
 
   const header = document.createElement("div");
   header.className = "unlock-card-header";
@@ -684,7 +700,7 @@ function createUnlockCard(item, options = {}) {
   if (options.featured) {
     chips.append(
       item.pageUrl
-        ? createLinkChip(item.pageUrl, content[lang].openGuide || "Open guide")
+        ? createChip(content[lang].openGuide || "Open guide", "chip-link")
         : createChip(content[lang].guideQueued || "Guide queued", "warning"),
     );
   }

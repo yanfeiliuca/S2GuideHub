@@ -70,6 +70,8 @@ Current interactions:
 - Persistent language preference when browser storage is available
 - Unlock search
 - Category filters: All, Mobility, Vehicle, Utility, Depth
+- Clickable Featured Unlock cards that open item guide pages
+- Shared bilingual item guide pages for Featured Unlocks
 - FAQ disclosure panels
 - Section-level Back to top links
 - Static About, Contact, and Privacy pages
@@ -172,6 +174,7 @@ Recommended nav for the next homepage version:
    - High-value unlock route promise
 2. **Featured Unlocks**
    - Five flagship items with score, category, risk, distance, and confidence labels
+   - Cards should link to their matching detail pages, not to method cards
 3. **Guide Logic**
    - Why it matters
    - Required parts
@@ -195,3 +198,16 @@ The page should feel like a route-planning console for an expedition:
 - Keep density higher than a marketing page but calmer than a wiki.
 - Avoid making the homepage look like a full interactive map competitor.
 - Preserve ad slots as quiet reserved bands between major content groups.
+
+### Item Guide Page Pattern
+
+Featured Unlock detail pages should all use the same fixed structure:
+
+1. Summary / 总览
+2. Player value / 玩家价值
+3. Required parts / 所需部件
+4. Optimized route / 推荐路线
+5. Risks and extras / 风险与顺路收益
+6. Verification / 信息可靠度
+
+The four homepage methodology cards remain explanatory modules only. They should not become standalone pages.
