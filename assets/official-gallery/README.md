@@ -1,10 +1,11 @@
 # S2GuideHub Official Promotional Image Gallery
 
-This folder stores official/publicly accessible promotional images for Subnautica 2 that can be referenced by S2GuideHub when an official screenshot, store image, or trailer poster is needed.
+This folder stores official/publicly accessible promotional images for Subnautica 2 that can be referenced by S2GuideHub when an official screenshot, store image, trailer poster, library artwork, localized capsule, or logo asset is needed.
 
 ## Source
 
 - Steam Subnautica 2 official store page: https://store.steampowered.com/app/1962700/Subnautica_2/
+- SteamDB asset index used only to locate Steam-hosted asset paths: https://steamdb.info/app/1962700/screenshots/
 
 ## Usage Rules
 
