@@ -157,23 +157,23 @@
 
   const guideImages = {
     "feedback-resonator": {
-      src: "assets/concept-feedback-resonator.png",
+      src: "assets/concept-feedback-resonator-rich.jpg",
       alt: "AI-generated Feedback Resonator concept image with sonar rings and glowing route signals",
     },
     "tadpole-haul-chassis": {
-      src: "assets/concept-tadpole-haul-chassis.png",
+      src: "assets/concept-tadpole-haul-chassis-rich.jpg",
       alt: "AI-generated Tadpole Haul Chassis concept image with a luminous assembly frame",
     },
     "tadpole-vehicle": {
-      src: "assets/concept-tadpole-vehicle.png",
+      src: "assets/concept-tadpole-vehicle-rich.jpg",
       alt: "AI-generated Tadpole Vehicle concept image with a small underwater craft silhouette",
     },
     "improved-fins": {
-      src: "assets/concept-improved-fins.png",
+      src: "assets/concept-improved-fins-rich.jpg",
       alt: "AI-generated Improved Fins concept image with paired luminous fin shapes",
     },
     "tadpole-depth-module-mk-i": {
-      src: "assets/concept-tadpole-depth-module-mk-i.png",
+      src: "assets/concept-tadpole-depth-module-mk-i-rich.jpg",
       alt: "AI-generated Tadpole Depth Module MK I concept image with a glowing pressure module",
     },
   };
