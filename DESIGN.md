@@ -51,16 +51,17 @@ Palette:
 
 Background policy:
 
-- Use original or generated assets only.
-- Do not use official screenshots, logos, or copyrighted game art.
+- Use official Subnautica 2 promotional images from `assets/official-gallery/` for page visuals.
+- Keep the AI-generated submarine route-planning image only on the Hotfix 2 blog article, with its AI disclosure intact.
+- Keep official-image captions and metadata clear: source is Steam / Unknown Worlds Entertainment; rights remain with their owners.
 - Keep the first viewport immersive but still useful.
 - Avoid generic neon arcade, esports purple, or template-like gradients.
 
 Current hero asset:
 
-- `assets/deep-ocean-console.png`
-- Generated locally as an original raster background.
-- Contains deep water, light shafts, subtle HUD lines, seabed silhouettes, and scan motifs.
+- `assets/official-gallery/subnautica-2-official-01.jpg`
+- Official Subnautica 2 promotional image via Steam / Unknown Worlds Entertainment.
+- Rendered behind a dark overlay and console scan lines so the hero text remains readable.
 
 ## 4. Interaction Model
 

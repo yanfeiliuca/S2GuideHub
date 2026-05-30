@@ -15,7 +15,7 @@ The first version is intentionally simple:
 - `js/main.js` homepage bilingual copy, language switcher, unlock data, and unlock filtering
 - `js/guide-data.js` shared bilingual content for item guide pages
 - `js/guide-page.js` shared item guide renderer and language switcher
-- `assets/deep-ocean-console.png` original generated hero background
+- `assets/official-gallery/` official promotional image library for page visuals and shared imagery
 - `DESIGN.md` design architecture and expansion notes
 - `robots.txt`, `sitemap.xml`, `_headers`, and `_redirects` for basic static deployment
 
@@ -33,7 +33,7 @@ Core palette:
 Core layout:
 
 - Sticky header with language switcher
-- Full-bleed hero using original ocean console art
+- Full-bleed hero using an official Subnautica 2 promotional screenshot with a dark console overlay
 - Featured unlock cards with score, risk, distance, and verification labels
 - Clickable Featured Unlock cards linking to matching item guide pages
 - Searchable unlock index

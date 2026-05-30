@@ -157,24 +157,24 @@
 
   const guideImages = {
     "feedback-resonator": {
-      src: "assets/concept-feedback-resonator-rich.jpg",
-      alt: "AI-generated Feedback Resonator concept image with sonar rings and glowing route signals",
+      src: "assets/official-gallery/subnautica-2-official-04.jpg",
+      alt: "Official Subnautica 2 promotional screenshot showing underwater wildlife and a handheld tool view",
     },
     "tadpole-haul-chassis": {
-      src: "assets/concept-tadpole-haul-chassis-rich.jpg",
-      alt: "AI-generated Tadpole Haul Chassis concept image with a luminous assembly frame",
+      src: "assets/official-gallery/subnautica-2-official-02.jpg",
+      alt: "Official Subnautica 2 promotional screenshot showing an interior room with equipment",
     },
     "tadpole-vehicle": {
-      src: "assets/concept-tadpole-vehicle-rich.jpg",
-      alt: "AI-generated Tadpole Vehicle concept image with a small underwater craft silhouette",
+      src: "assets/official-gallery/subnautica-2-official-06.jpg",
+      alt: "Official Subnautica 2 promotional screenshot showing a vehicle moving through an orange underwater biome",
     },
     "improved-fins": {
-      src: "assets/concept-improved-fins-rich.jpg",
-      alt: "AI-generated Improved Fins concept image with paired luminous fin shapes",
+      src: "assets/official-gallery/subnautica-2-official-03.jpg",
+      alt: "Official Subnautica 2 promotional screenshot showing a diver swimming through a bright reef",
     },
     "tadpole-depth-module-mk-i": {
-      src: "assets/concept-tadpole-depth-module-mk-i-rich.jpg",
-      alt: "AI-generated Tadpole Depth Module MK I concept image with a glowing pressure module",
+      src: "assets/official-gallery/subnautica-2-official-05.jpg",
+      alt: "Official Subnautica 2 promotional screenshot showing a deeper dark underwater biome",
     },
   };
 
@@ -182,8 +182,8 @@
     const image = guideImages[window.guidePageId] || guideImages["tadpole-vehicle"];
     const caption =
       lang === "zh"
-        ? "AI-generated concept image / AI 生成概念图。Not official Subnautica 2 art or a game screenshot."
-        : "AI-generated concept image. Not official Subnautica 2 art or a game screenshot.";
+        ? "Official Subnautica 2 promotional image via Steam / 官方宣传图，来源：Steam。Rights remain with Unknown Worlds Entertainment and related rightsholders."
+        : "Official Subnautica 2 promotional image via Steam. Rights remain with Unknown Worlds Entertainment and related rightsholders.";
 
     return `
       <figure class="concept-figure guide-concept">
