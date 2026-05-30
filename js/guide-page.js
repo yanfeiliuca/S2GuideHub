@@ -154,6 +154,21 @@
     `;
   }
 
+
+  function renderConceptFigure(lang) {
+    const caption =
+      lang === "zh"
+        ? "AI-generated concept image / AI 生成概念图。Not official Subnautica 2 art or a game screenshot."
+        : "AI-generated concept image. Not official Subnautica 2 art or a game screenshot.";
+    const alt = "AI-generated underwater exploration concept image showing a small craft surveying a deep ocean route";
+
+    return `
+      <figure class="concept-figure guide-concept">
+        <img src="../assets/blog-hotfix-2-route-planning.png" alt="${escapeHtml(alt)}">
+        <figcaption>${escapeHtml(caption)}</figcaption>
+      </figure>
+    `;
+  }
   function renderPage(lang) {
     const data = page.content[lang] || page.content.en;
     const documentLang = lang === "zh" ? "zh-CN" : "en";
@@ -168,6 +183,8 @@
           ${renderSummaryItems(data.summaryItems)}
         </div>
       </section>
+
+      ${renderConceptFigure(lang)}
 
       <section class="guide-section" id="guide-summary" aria-labelledby="summary-title">
         <div class="guide-layout">

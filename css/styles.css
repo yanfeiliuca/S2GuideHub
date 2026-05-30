@@ -1252,6 +1252,42 @@ a.unlock-card:focus-visible {
   padding: 10px 12px;
 }
 
+
+.concept-figure {
+  max-width: var(--max);
+  margin: 34px auto 0;
+  border: 1px solid rgba(110, 238, 225, 0.18);
+  border-radius: var(--radius);
+  background: rgba(8, 24, 31, 0.62);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.concept-figure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+}
+
+.concept-figure figcaption {
+  border-top: 1px solid rgba(110, 238, 225, 0.12);
+  color: var(--muted);
+  font-size: 0.82rem;
+  padding: 10px 12px;
+}
+
+.homepage-concept,
+.page-concept,
+.guide-concept {
+  margin-left: max(24px, calc((100vw - var(--max)) / 2));
+  margin-right: max(24px, calc((100vw - var(--max)) / 2));
+}
+
+.guide-concept {
+  margin-top: 0;
+  margin-bottom: 42px;
+}
 .article-layout {
   display: grid;
   grid-template-columns: minmax(0, 760px) minmax(240px, 300px);
@@ -1587,6 +1623,14 @@ a.unlock-card:focus-visible {
 }
 
 @media (max-width: 760px) {
+  .homepage-concept,
+  .page-concept,
+  .guide-concept {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+
   .site-header {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 12px;
